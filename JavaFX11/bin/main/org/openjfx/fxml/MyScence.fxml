@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="634.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.controller.MyController">
+   <children>
+      <Button fx:id="tj" layoutX="267.0" layoutY="287.0" mnemonicParsing="false" onAction="#eventButton" text="提交" />
+      <TextField id="textIp" fx:id="textIp" layoutX="43.0" layoutY="77.0" promptText="IP地址" />
+      <TextField id="textUser" fx:id="textUser" layoutX="43.0" layoutY="168.0" promptText="用户" />
+      <TextField id="textConnectionName" fx:id="textConnectionName" layoutX="43.0" layoutY="28.0" promptText="连接名" />
+      <TextField id="textPort" fx:id="textPort" layoutX="43.0" layoutY="122.0" promptText="端口" />
+      <TextField id="textPass" fx:id="textPass" layoutX="43.0" layoutY="216.0" promptText="密码" />
+      <TextField fx:id="dataBasic" layoutX="277.0" layoutY="77.0" promptText="数据库名称" />
+      <TextArea fx:id="test_a" layoutX="44.0" layoutY="287.0" prefHeight="200.0" prefWidth="200.0" promptText="数据库连接状态" />
+   </children>
+</AnchorPane>
