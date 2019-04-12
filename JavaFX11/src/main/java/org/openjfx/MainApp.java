@@ -15,7 +15,7 @@ public class MainApp extends Application {
 
 	@Override
 	public void start(Stage stage) {
-		myScence(stage);
+		myScence(stage); 
 	}
 
 	public static void main(String[] args) {
