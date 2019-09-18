@@ -27,6 +27,12 @@ dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-web'){
 		exclude module: 'spring-boot-starter-logging'
 	}
+	implementation('org.springframework.boot:spring-boot-starter-thymeleaf'){
+		exclude module: 'spring-boot-starter-logging'
+	}
+	implementation('org.springframework.boot:spring-boot-starter-data-redis'){
+		exclude module: 'spring-boot-starter-logging'
+	}
 	implementation('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'){
 		exclude module: 'spring-boot-starter-logging'
 	}
@@ -54,6 +60,7 @@ dependencies {
 		exclude module: 'jconsole'
 	}
 	implementation('org.apache.logging.log4j:log4j-web:2.11.1')
+	implementation('redis.clients:jedis:3.0.1')
 	
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'mysql:mysql-connector-java'

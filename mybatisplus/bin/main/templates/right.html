@@ -1,0 +1,487 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:fragment="right" id="right">
+		<div id="countryDiv" style="display: none; height: 645px;"
+			class='bootstrap-table'>
+			<button type="button" class="btn btn-default btn-sm"
+				data-toggle="modal" data-target="#countryModal" id="buttons">新增</button>
+			<table id="table">
+			</table>
+		</div>
+
+		<!-- 国家 模态框（Modal） -->
+		<div class="modal fade" id="countryModal" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" style="margin-left: 80%;"
+							data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myModalLabel">新增国家</h4>
+					</div>
+					<form class="form-inline" role="form" id="countryForm"
+						onsubmit="return registCountry();">
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="countryName" class="sr-only">国家名称:</label> <input
+									type="text" id="countryName" name="countryName"
+									class="form-control" placeholder="请输入国家名" />
+							</div>
+							<div class="form-group">
+								<label for="countryNumber" class="sr-only">国家编号:</label> <input
+									type="text" id="countryNumber" name="countryNumber"
+									class="form-control" placeholder="请输入国家编号" />
+							</div>
+							<div class="form-group">
+								<label for="abbreviation" class="sr-only">英文名称:</label> <input
+									type="text" id="abbreviation" name="abbreviation"
+									class="form-control" placeholder="请输入英文名" />
+							</div>
+							<div class="form-group">
+								<label for="phoneCode" class="sr-only">电话区号:</label> <input
+									type="text" id="phoneCode" name="phoneCode"
+									class="form-control" placeholder="请输入电话区号" />
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="submit" class="btn btn-info">确定</button>
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">取消</button>
+						</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+
+		<!-- 省份 -->
+		<div class="modal fade" id="provinceModal" tabindex="-1" role="dialog"
+			aria-labelledby="myProvinceModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" style="margin-left: 80%;"
+							data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myProvinceModalLabel">新增省市</h4>
+					</div>
+					<form class="form-horizontal" role="form" id="provinceForm"
+							onsubmit="return registProvince();">
+					<div class="modal-body">
+							<div class="form-group">
+								<label for="countryId" class="sr-only">所属国家:</label>
+								        <select id="countryId" name="countryId" class="form-control well">
+								        </select>
+									<!-- <input type="text" id="countryId" name="countryId"
+										class="form-control well" placeholder="请输入用户名" /> -->
+							</div>
+							<div class="form-group">
+								<label for="provinceName" class="sr-only">省市名称:</label>
+									<input type="text" id="provinceName" name="provinceName"
+										class="form-control well" placeholder="请输入用户名" />
+							</div>
+							<div class="form-group">
+								<label for="provinceNumber" class="sr-only">省市编号:</label>
+									<input type="text" id="provinceNumber" name="provinceNumber"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="abbreviation" class="sr-only">简&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
+									<input type="text" id="abbreviation" name="abbreviation"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="phoneCode" class="sr-only">电话区号:</label>
+									<input type="text" id="phoneCode" name="phoneCode"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-info">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		
+		<!-- 城市 -->
+		<div class="modal fade" id="cityModal" tabindex="-1" role="dialog"
+			aria-labelledby="myCityModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" style="margin-left: 80%;"
+							data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myCityModalLabel">新增城市</h4>
+					</div>
+					<form class="form-horizontal" role="form" id="cityForm"
+							onsubmit="return registCity();">
+					<div class="modal-body">
+							<div class="form-group">
+								<label for="provinceId" class="sr-only">所属省市:</label>
+								        <select id="provinceId" name="provinceId" class="form-control well">
+								        </select>
+									<!-- <input type="text" id="countryId" name="countryId"
+										class="form-control well" placeholder="请输入用户名" /> -->
+							</div>
+							<div class="form-group">
+								<label for="cityName" class="sr-only">城市名称:</label>
+									<input type="text" id="cityName" name="cityName"
+										class="form-control well" placeholder="请输入用户名" />
+							</div>
+							<div class="form-group">
+								<label for="cityNumber" class="sr-only">城市编号:</label>
+									<input type="text" id="cityNumber" name="cityNumber"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="abbreviation" class="sr-only">简&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
+									<input type="text" id="abbreviation" name="abbreviation"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="areaCode" class="sr-only">电话区号:</label>
+									<input type="text" id="areaCode" name="areaCode"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-info">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		
+		<!-- 区县 -->
+		<div class="modal fade" id="districtModal" tabindex="-1" role="dialog"
+			aria-labelledby="myDistrictModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" style="margin-left: 80%;"
+							data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myDdistrictModalLabel">新增区县</h4>
+					</div>
+					<form class="form-horizontal" role="form" id="districtForm"
+							onsubmit="return registDistrict();">
+					<div class="modal-body">
+							<div class="form-group">
+								<label for="cityId" class="sr-only">所属城市:</label>
+								        <select id="cityId" name="cityId" class="form-control well">
+								        </select>
+									<!-- <input type="text" id="countryId" name="countryId"
+										class="form-control well" placeholder="请输入用户名" /> -->
+							</div>
+							<div class="form-group">
+								<label for="districtName" class="sr-only">区县名称:</label>
+									<input type="text" id="districtName" name="districtName"
+										class="form-control well" placeholder="请输入用户名" />
+							</div>
+							<div class="form-group">
+								<label for="districtNumber" class="sr-only">区县编号:</label>
+									<input type="text" id="districtNumber" name="districtNumber"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="abbreviation" class="sr-only">简&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
+									<input type="text" id="abbreviation" name="abbreviation"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="postCode" class="sr-only">电话区号:</label>
+									<input type="text" id="postCode" name="postCode"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-info">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		
+		<!-- 乡镇 -->
+		<div class="modal fade" id="countrysideModal" tabindex="-1" role="dialog"
+			aria-labelledby="myCountrysideModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" style="margin-left: 80%;"
+							data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myCountrysideModalLabel">新增城市</h4>
+					</div>
+					<form class="form-horizontal" role="form" id="cityForm"
+							onsubmit="return registCountryside();">
+					<div class="modal-body">
+							<div class="form-group">
+								<label for="districtId" class="sr-only">所属省市:</label>
+								        <select id="districtId" name="districtId" class="form-control well">
+								        </select>
+									<!-- <input type="text" id="countryId" name="countryId"
+										class="form-control well" placeholder="请输入用户名" /> -->
+							</div>
+							<div class="form-group">
+								<label for="countrysideName" class="sr-only">城市名称:</label>
+									<input type="text" id="countrysideName" name="countrysideName"
+										class="form-control well" placeholder="请输入用户名" />
+							</div>
+							<div class="form-group">
+								<label for="countrysideNumber" class="sr-only">城市编号:</label>
+									<input type="text" id="countrysideNumber" name="countrysideNumber"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="abbreviation" class="sr-only">简&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
+									<input type="text" id="abbreviation" name="abbreviation"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="areaCode" class="sr-only">区号:</label>
+									<input type="text" id="areaCode" name="areaCode"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="postCode" class="sr-only">电话区号:</label>
+									<input type="text" id="postCode" name="postCode"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-info">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		
+		<!-- 村庄 -->
+		<div class="modal fade" id="villageModal" tabindex="-1" role="dialog"
+			aria-labelledby="myVillageModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" style="margin-left: 80%;"
+							data-dismiss="modal" aria-hidden="true">×</button>
+						<h4 class="modal-title" id="myVillageModalLabel">新增城市</h4>
+					</div>
+					<form class="form-horizontal" role="form" id="villageForm"
+							onsubmit="return registVillage();">
+					<div class="modal-body">
+							<div class="form-group">
+								<label for="countrysideId" class="sr-only">所属省市:</label>
+							        <select id="countrysideId" name="countrysideId" class="form-control well">
+							        </select>
+							</div>
+							<div class="form-group">
+								<label for="villageName" class="sr-only">城市名称:</label>
+									<input type="text" id="villageName" name="villageName"
+										class="form-control well" placeholder="请输入用户名" />
+							</div>
+							<div class="form-group">
+								<label for="villageNumber" class="sr-only">城市编号:</label>
+									<input type="text" id="villageNumber" name="villageNumber"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="abbreviation" class="sr-only">简&nbsp;&nbsp;&nbsp;&nbsp;称:</label>
+									<input type="text" id="abbreviation" name="abbreviation"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+							<div class="form-group">
+								<label for="areaCode" class="sr-only">电话区号:</label>
+									<input type="text" id="areaCode" name="areaCode"
+										class="form-control well" placeholder="请输入密码" />
+							</div>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-info">确定</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+					</form>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		
+	</div>
+	
+	<!-- 模态框 国家  信息删除确认 -->
+	<div class="modal fade" id="deleteCountryModal">
+		<div class="modal-dialog">
+			<div class="modal-content message_align">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 隐藏需要删除的id -->
+					<input type="hidden" id="deleteHaulId" />
+					<p>您确认要删除该条记录吗？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary"
+						id="deleteCountryButton">确认</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- 模态框 省市  信息删除确认 -->
+	<div class="modal fade" id="deleteProvinceModal">
+		<div class="modal-dialog">
+			<div class="modal-content message_align">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 隐藏需要删除的id -->
+					<input type="hidden" id="deleteProvinceId" />
+					<p>您确认要删除该条记录吗？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary"
+						id="deleteProvinceButton">确认</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- 模态框 城市  信息删除确认 -->
+	<div class="modal fade" id="deleteCityModal">
+		<div class="modal-dialog">
+			<div class="modal-content message_align">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 隐藏需要删除的id -->
+					<input type="hidden" id="deleteCityId" />
+					<p>您确认要删除该条记录吗？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary"
+						id="deleteCityButton">确认</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- 模态框 区县  信息删除确认 -->
+	<div class="modal fade" id="deleteDistrictModal">
+		<div class="modal-dialog">
+			<div class="modal-content message_align">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 隐藏需要删除的id -->
+					<input type="hidden" id="deleteDistrictId" />
+					<p>您确认要删除该条记录吗？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary"
+						id="deleteDistrictButton">确认</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- 模态框 乡镇  信息删除确认 -->
+	<div class="modal fade" id="deleteCountysiteModal">
+		<div class="modal-dialog">
+			<div class="modal-content message_align">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 隐藏需要删除的id -->
+					<input type="hidden" id="deleteCountysiteId" />
+					<p>您确认要删除该条记录吗？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary"
+						id="deleteCountysiteButton">确认</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- 模态框 村庄  信息删除确认 -->
+	<div class="modal fade" id="deleteVillageModal">
+		<div class="modal-dialog">
+			<div class="modal-content message_align">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+					<h4 class="modal-title">提示</h4>
+				</div>
+				<div class="modal-body">
+					<!-- 隐藏需要删除的id -->
+					<input type="hidden" id="deleteVillageId" />
+					<p>您确认要删除该条记录吗？</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					<button type="button" class="btn btn-primary"
+						id="deleteVillageButton">确认</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+</body>
+</html>

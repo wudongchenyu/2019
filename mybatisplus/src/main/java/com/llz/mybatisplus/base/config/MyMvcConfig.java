@@ -17,6 +17,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.thymeleaf.spring5.SpringTemplateEngine;
+import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.templatemode.TemplateMode;
+import org.thymeleaf.templateresolver.ITemplateResolver;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
@@ -89,4 +93,31 @@ public class MyMvcConfig implements WebMvcConfigurer{
 		registry.addResourceHandler("/webjars/**")
 			.addResourceLocations("classpath:/META-INF/resources/webjars/");
 	}
+	
+	/**
+     * STEP 1 - 创建模版解析器
+     */
+    @Bean
+    public ITemplateResolver templateResolver() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setPrefix("classpath:/templates/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setCharacterEncoding("UTF-8");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCacheable(false);
+        return templateResolver;
+    }
+
+
+    /**
+     * STEP 2 - 创建模版引擎
+     * 并为模板引擎注入模板解析器
+     */
+    @Bean
+    public SpringTemplateEngine templateEngine() {
+        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+        templateEngine.setTemplateResolver(templateResolver());
+        templateEngine.setEnableSpringELCompiler(true);
+        return templateEngine;
+    }
 }

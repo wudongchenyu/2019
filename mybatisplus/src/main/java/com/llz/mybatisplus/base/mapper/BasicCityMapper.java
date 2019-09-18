@@ -15,5 +15,8 @@ import com.llz.mybatisplus.base.entity.BasicCity;
  */
 @Mapper
 public interface BasicCityMapper extends BaseMapper<BasicCity>{
+
+	
+	void save(BasicCity city);
 	
 }

@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+body {
+	background-color: #e2e2e2;
+}
+
+.alldiv {
+	height: 100%;
+}
+
+.left {
+	height: 95.8%;
+	width: 16%;
+	float: left;
+	background-color: #e2e2e2;
+}
+
+.top {
+	background-color: #44495a;
+	font-size: 26px;
+	font-family: "隶书";
+	color: #fff;
+	text-align: left;
+}
+
+.top span {
+	padding-left: 20px;
+}
+
+.right {
+	height: 93%;
+	width: 80%;
+	padding-left: 40px;
+	padding-top: 15px;
+	padding-bottom: 0px;
+	float: left;
+}
+
+.workproject {
+	background-color: red;
+}
+
+/* ul li {
+	font-size: 24px;
+	font-family: "隶书";
+	font-weight: bold;
+	text-align: left;
+	height: 38px;
+	line-height: 38px;
+	color: #4a4a4a;
+} */
+.disdiv {
+	display: none;
+}
+
+* {
+	outline: 0;
+	-webkit-tap-highlight-color: transparent
+}
+
+#menu {
+	overflow: hidden;
+	height: 100%;
+	float: left;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+#menu #ensconce {
+	width: .45rem;
+	height: 100%;
+	background-color: #393c4a;
+	float: left;
+	text-align: center;
+	position: relative;
+	display: none
+}
+
+#menu #ensconce h2 {
+	cursor: pointer;
+	color: #fff;
+	font-size: .24rem;
+	line-height: .5rem;
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(0%, -50%)
+}
+
+#menu #ensconce h2 img {
+	width: 52%
+}
+
+#menu #open {
+	width: 2.6rem;
+	height: 100%;
+	background-color: #363a45;
+	padding-bottom: .1rem;
+	box-sizing: border-box;
+	-webkit-transition: all .8s ease;
+	-moz-transition: all .8s ease;
+	-o-transition: all .8s ease;
+	-ms-transition: all .8s ease
+}
+
+#menu #open .navH {
+	height: .6rem;
+	background-color: #44495a;
+	line-height: .6rem;
+	text-align: center;
+	font-size: .22rem;
+	color: #fff;
+	position: relative;
+	box-sizing: border-box
+}
+
+#menu #open .navH span {
+	position: absolute;
+	top: 49%;
+	right: 0;
+	padding: 0 .15rem;
+	cursor: pointer;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	display: inline-block
+}
+
+#menu #open .navH span .obscure {
+	width: .24rem
+}
+
+#menu #open .navBox {
+	height: 100%;
+	overflow-y: auto;
+	padding-left: .05rem;
+	padding-right: .07rem;
+	margin-top: .1rem
+}
+
+#menu #open .navBox ul li {
+	background-color: #393c4a;
+	cursor: pointer;
+	margin-bottom: 4px
+}
+
+#menu #open .navBox ul li .obtain {
+	background-color: #3889d4
+}
+
+#menu #open .navBox ul li .obtain:hover {
+	background-color: #3d8332
+}
+
+#menu #open .navBox ul li h2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: .24rem;
+	padding: .15rem 0;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	-ms-transition: all .6s ease
+}
+
+#menu #open .navBox ul li h2 i {
+	position: absolute;
+	top: 50%;
+	right: .15rem;
+	border-top: .07rem transparent dashed;
+	border-left: .07rem solid #fff;
+	border-right: .07rem transparent dashed;
+	border-bottom: .07rem transparent dashed;
+	display: inline-block;
+	-webkit-transition: -webkit-transform .6s ease;
+	-moz-transition: -moz-transform .6s ease;
+	-o-transition: -o-transform .6s ease;
+	-ms-transition: -ms-transform .6s ease;
+	transform-origin: 4px 3px;
+	-webkit-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	-o-transform: translate(0, -50%);
+	transform: translate(0, -50%)
+}
+
+#menu #open .navBox ul li h2 .arrowRot {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg)
+}
+
+#menu #open .navBox ul li .secondary {
+	overflow: hidden;
+	height: 0;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	-o-transition: all .6s ease;
+	-ms-transition: all .6s ease
+}
+
+#menu #open .navBox ul li .secondary h3 {
+	padding: .1rem 0;
+	text-align: center;
+	font-size: .20rem;
+	background-color: #282c3a;
+	color: #fff;
+	border-bottom: .8px solid #42495d;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease
+}
+
+#menu #open .navBox ul li .secondary h3:hover {
+	background-color: #1acbfc
+}
+
+#menu #open .navBox ul li .secondary .seconFocus {
+	background-color: #1acbfc;
+	-webkit-box-shadow: 3px 3px 3px #aa8c51;
+	-moz-box-shadow: 3px 3px 3px #aa8c51;
+	box-shadow: 3px 3px 3px #aa8c51
+}
+
+@media screen and (max-width:1000px) {
+	#open {
+		width: 130px !important
+	}
+	#ensconce {
+		width: 27px !important
+	}
+	#ensconce h2 {
+		font-size: 14px !important
+	}
+	#ensconce h2 img {
+		margin-bottom: 15px !important
+	}
+}
+
+#buttons {
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
+	height: 45px;
+	width: 85px;
+	border-radius: 6px;
+}
+
+#countryModal {
+	position: fixed;
+	top: 100px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	outline: 0;
+	z-index: 1050;
+}
+
+#provinceModal {
+	position: fixed;
+	top: 100px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	outline: 0;
+	z-index: 1050;
+}
+
+.modal.fade button {
+	color: #fff;
+	background-color: #5bc0de;
+	border-color: #46b8da;
+	height: 45px;
+	width: 85px;
+	border-radius: 6px;
+}
+
+.modal-dialog{
+	width: 400px;
+}
+.control-group.warning > label,
+.control-group.warning .help-block,
+.control-group.warning .help-inline {
+  color: #c09853;
+}
+ 
+.control-group.warning input,
+.control-group.warning select,
+.control-group.warning textarea {
+  color: #c09853;
+  border-color: #c09853;
+}
+ 
+.control-group.warning input:focus,
+.control-group.warning select:focus,
+.control-group.warning textarea:focus {
+  border-color: #a47e3c;
+  -webkit-box-shadow: 0 0 6px #dbc59e;
+     -moz-box-shadow: 0 0 6px #dbc59e;
+          box-shadow: 0 0 6px #dbc59e;
+}
+ 
+.control-group.warning .input-prepend .add-on,
+.control-group.warning .input-append .add-on {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #c09853;
+}
+ 
+.control-group.error > label,
+.control-group.error .help-block,
+.control-group.error .help-inline {
+  color: #b94a48;
+}
+ 
+.control-group.error input,
+.control-group.error select,
+.control-group.error textarea {
+  color: #b94a48;
+  border-color: #b94a48;
+}
+ 
+.control-group.error input:focus,
+.control-group.error select:focus,
+.control-group.error textarea:focus {
+  border-color: #953b39;
+  -webkit-box-shadow: 0 0 6px #d59392;
+     -moz-box-shadow: 0 0 6px #d59392;
+          box-shadow: 0 0 6px #d59392;
+}
+ 
+.control-group.error .input-prepend .add-on,
+.control-group.error .input-append .add-on {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #b94a48;
+}
+ 
+.control-group.success > label,
+.control-group.success .help-block,
+.control-group.success .help-inline {
+  color: #468847;
+}
+ 
+.control-group.success input,
+.control-group.success select,
+.control-group.success textarea {
+  color: #468847;
+  border-color: #468847;
+}
+ 
+.control-group.success input:focus,
+.control-group.success select:focus,
+.control-group.success textarea:focus {
+  border-color: #356635;
+  -webkit-box-shadow: 0 0 6px #7aba7b;
+     -moz-box-shadow: 0 0 6px #7aba7b;
+          box-shadow: 0 0 6px #7aba7b;
+}
+
+.alert {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    min-width: 135px;
+    margin-left: -100px;
+    z-index: 99999;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: rgb(255, 255, 255);
+    background-color: rgba(88,105,120,.9);
+    border-color: #d6e9c6;
+}
+
+.alert-info {
+    color: rgb(255, 255, 255);
+    background-color: rgba(88,105,120,.9);
+    border-color: #bce8f1;
+}
+
+.alert-warning {
+    color: rgb(255, 255, 255);
+    background-color: rgba(88,105,120,.9);
+    border-color: #faebcc;
+}
+
+.alert-danger {
+    color: rgb(255, 255, 255);
+    background-color: rgba(88,105,120,.9);
+    border-color: #ebccd1;
+}
+.help-block {
+	color: red;
+}

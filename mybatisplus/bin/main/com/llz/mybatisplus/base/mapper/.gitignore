@@ -1,5 +1,6 @@
-/BasicRoleMenuMapper.class
 /BasicCityMapper.class
+/BasicCountryMapper.class
+/BasicCountrysideMapper.class
 /BasicDepartmentMapper.class
 /BasicDistrictMapper.class
 /BasicHospitalMapper.class
@@ -7,4 +8,6 @@
 /BasicPhysicianMapper.class
 /BasicProvinceMapper.class
 /BasicRoleMapper.class
+/BasicRoleMenuMapper.class
 /BasicUserMapper.class
+/BasicVillageMapper.class

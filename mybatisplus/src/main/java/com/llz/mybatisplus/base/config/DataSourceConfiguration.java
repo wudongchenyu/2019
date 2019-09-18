@@ -43,6 +43,7 @@ public class DataSourceConfiguration {
 		source.setInitialSize(initialSize);
 		source.setMaxActive(maxActive);
 		source.setMaxWait(maxWait);
+		source.setValidationQuery("SELECT 1");
 		source.setTimeBetweenEvictionRunsMillis(timeBetweenEvictionRunsMillis);
 		source.setMinEvictableIdleTimeMillis(minEvictableIdleTimeMillis);
 		source.setValidationQuery(validationQuery);

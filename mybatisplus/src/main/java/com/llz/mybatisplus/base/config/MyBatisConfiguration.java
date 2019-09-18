@@ -3,6 +3,7 @@ package com.llz.mybatisplus.base.config;
 import javax.sql.DataSource;
 
 import org.apache.ibatis.logging.log4j2.Log4j2Impl;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -16,6 +17,7 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.baomidou.mybatisplus.core.MybatisConfiguration;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 
 @Configuration
@@ -32,6 +34,8 @@ public class MyBatisConfiguration {
 		MybatisSqlSessionFactoryBean bean = new MybatisSqlSessionFactoryBean();
 		bean.setDataSource(this.dataSource);
 		bean.setTypeAliasesPackage("com.llz.mybatisplus.base.entity");
+		Interceptor[] interceptor = {paginationInterceptor()};
+		bean.setPlugins(interceptor);
 		MybatisConfiguration configuration = 
 				new MybatisConfiguration();
 		configuration.setLogImpl(Log4j2Impl.class);
@@ -45,6 +49,12 @@ public class MyBatisConfiguration {
 	
 	public @Bean(name = "platformTransactionManager") PlatformTransactionManager platformTransactionManager() {
 		return new DataSourceTransactionManager(this.dataSource);
+	}
+	
+	public @Bean PaginationInterceptor paginationInterceptor() {
+		PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+		paginationInterceptor.setDialectType("mysql");
+		return paginationInterceptor;
 	}
 
 }

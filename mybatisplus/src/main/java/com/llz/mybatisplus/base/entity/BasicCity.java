@@ -1,15 +1,14 @@
 package com.llz.mybatisplus.base.entity;
 
 import java.io.Serializable;
+
+import jdk.jfr.Description;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
- * <p>
- * 
- * </p>
- *
+ * 市
  * @author llz
  * @since 2019-04-16
  */
@@ -29,8 +28,13 @@ public class BasicCity implements Serializable {
     private String cityNumber;
 
     private String cityType;
+    
+    @Description(value = "简称")
+    private String abbreviation;
 
     private String provinceId;
+    
+    private String remake;
 
 
 }

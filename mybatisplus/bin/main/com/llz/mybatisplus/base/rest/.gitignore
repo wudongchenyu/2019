@@ -1,4 +1,6 @@
 /BasicCityController.class
+/BasicCountryController.class
+/BasicCountrysideController.class
 /BasicDepartmentController.class
 /BasicDistrictController.class
 /BasicHospitalController.class
@@ -8,3 +10,4 @@
 /BasicRoleController.class
 /BasicRoleMenuController.class
 /BasicUserController.class
+/BasicVillageController.class

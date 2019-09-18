@@ -1,4 +1,6 @@
 /BasicCityServiceImpl.class
+/BasicCountryServiceImpl.class
+/BasicCountrysideServiceImpl.class
 /BasicDepartmentServiceImpl.class
 /BasicDistrictServiceImpl.class
 /BasicHospitalServiceImpl.class
@@ -8,3 +10,4 @@
 /BasicRoleMenuServiceImpl.class
 /BasicRoleServiceImpl.class
 /BasicUserServiceImpl.class
+/BasicVillageServiceImpl.class

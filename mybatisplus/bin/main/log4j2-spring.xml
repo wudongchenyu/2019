@@ -11,12 +11,12 @@
 		<console name="Console" target="SYSTEM_OUT">
 			<!-- Console节点用来定义输出到控制台的Appender. -->
 			<!-- 输出格式 -->
-			<PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
+			<PatternLayout pattern="[%d{yyyy-MM-dd HH:mm:ss:SSS}] [%p] - %l - %m%n"/>
 		</console>
 		
 		<!-- File节点用来定义输出到指定位置的文件的Appender.append设置是否添加 -->
 		<File name="log" fileName="${logdir}/test.log" append="false">
-			<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+			<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
 		</File>
 		
 		<!-- 这个会打印出所有的info及以下级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
@@ -60,9 +60,6 @@
 		<root level="info">
 		    <appender-ref ref="Console"/>
 		    <appender-ref ref="log"/>
-		    <appender-ref ref="RollingFileInfo"/>
-		    <appender-ref ref="RollingFileWarn"/>
-		    <appender-ref ref="RollingFileError"/>
 		</root>
      </loggers>
 </configuration>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="X-UA-Compatible" content="ie=edge">
+    <title>系统中心</title>
+    <link rel="shortcut icon" href="img/tb/bitbug_favicon.ico" >
+    <link rel="stylesheet" href="css/base.css" type="text/css" > <!--初始化文件-->
+    <link rel="stylesheet" href="css/menu.css" type="text/css" > <!--主样式-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" >
+    <link rel="stylesheet" href="css/bootstrap-table.css" type="text/css" >
+    <!-- <link rel="stylesheet" href="css/bootstrap-select.min.css" type="text/css" > -->
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap-table.js"></script>
+	<script type="text/javascript" src="js/bootstrap-table-zh-CN.js"></script>
+	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+	<!-- <script type="text/javascript" src="js/bootstrap-select.min.js"></script> -->
+	<script type="text/javascript" src="js/messages_zh.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/adapter.js"></script>
+    <script type="text/javascript" src="js/center.js"></script>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/button.js"></script>
+    <script type="text/javascript" src="js/dropdown.js"></script>
+    
+    
+</head>
+<body>
+<div class = "alldiv">
+	<div class = "top" th:include="top :: top">
+	</div>
+	<div class = "left" th:include="left :: left">
+	</div>
+	<div class = "right" th:include="right :: right">
+	</div>
+</div>
+</body>
+</html>

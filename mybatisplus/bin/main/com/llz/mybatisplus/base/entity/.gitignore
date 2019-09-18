@@ -1,4 +1,6 @@
 /BasicCity.class
+/BasicCountry.class
+/BasicCountryside.class
 /BasicDepartment.class
 /BasicDistrict.class
 /BasicHospital.class
@@ -8,3 +10,4 @@
 /BasicRole.class
 /BasicRoleMenu.class
 /BasicUser.class
+/BasicVillage.class

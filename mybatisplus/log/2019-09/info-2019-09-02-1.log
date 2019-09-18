@@ -1,0 +1,120 @@
+[15:02:31:611] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f2b57dff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:02:32:495] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:675) - No active profile set, falling back to default profiles: default
+[15:02:34:255] [INFO] - org.springframework.cloud.context.scope.GenericScope.setSerializationId(GenericScope.java:295) - BeanFactory id=2d7e8d6a-20f2-3084-9f0e-b722ea4ce639
+[15:02:34:414] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d69b7b02] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:02:34:454] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f2b57dff] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:02:34:864] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:90) - Tomcat initialized with port(s): 8080 (http)
+[15:02:36:184] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:296) - Root WebApplicationContext: initialization completed in 3670 ms
+[15:02:36:314] [INFO] - com.llz.mybatisplus.base.config.DataSourceConfiguration.dataSource(DataSourceConfiguration.java:60) - 数据库连接属性：5
+[15:02:36:658] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:02:36:691] [WARN] - org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:557) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisLettuceConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.host' in value "${spring.redis.host}"
+[15:02:36:695] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closing ...
+[15:02:36:701] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[15:02:36:728] [INFO] - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:142) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[15:02:36:731] [ERROR] - org.springframework.boot.SpringApplication.reportFailure(SpringApplication.java:858) - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisLettuceConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.host' in value "${spring.redis.host}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142) ~[spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248) [spring-boot-2.1.4.RELEASE.jar:2.1.4.RELEASE]
+	at com.llz.mybatisplus.MybatisplusApplication.main(MybatisplusApplication.java:12) [main/:?]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.redis.host' in value "${spring.redis.host}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1188) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	... 17 more
+[15:03:36:802] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f63f318b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:03:37:580] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:675) - No active profile set, falling back to default profiles: default
+[15:03:39:283] [INFO] - org.springframework.cloud.context.scope.GenericScope.setSerializationId(GenericScope.java:295) - BeanFactory id=2d7e8d6a-20f2-3084-9f0e-b722ea4ce639
+[15:03:39:449] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da252e8e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:03:39:478] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f63f318b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:03:39:859] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:90) - Tomcat initialized with port(s): 8080 (http)
+[15:03:41:178] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:296) - Root WebApplicationContext: initialization completed in 3583 ms
+[15:03:41:292] [INFO] - com.llz.mybatisplus.base.config.DataSourceConfiguration.dataSource(DataSourceConfiguration.java:60) - 数据库连接属性：5
+[15:03:41:531] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:03:43:314] [INFO] - springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[15:03:43:586] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+[15:03:44:229] [WARN] - io.lettuce.core.resource.DefaultClientResources.finalize(DefaultClientResources.java:573) - io.lettuce.core.resource.DefaultClientResources was not shut down properly, shutdown() was not called before it's garbage-collected. Call shutdown() or shutdown(long,long,TimeUnit) 
+[15:03:45:724] [INFO] - org.springframework.cloud.netflix.eureka.InstanceInfoFactory.create(InstanceInfoFactory.java:72) - Setting initial instance status as: STARTING
+[15:03:50:951] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:41) - Registering application SPRINGBOOT-MYBATIS with eureka with status UP
+[15:03:51:173] [INFO] - org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener.logMessage(ConditionEvaluationReportLoggingListener.java:142) - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[15:03:51:175] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.deregister(EurekaServiceRegistry.java:65) - Unregistering application SPRINGBOOT-MYBATIS with eureka with status DOWN
+[15:03:51:189] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.shutdown(ExecutorConfigurationSupport.java:208) - Shutting down ExecutorService 'applicationTaskExecutor'
+[15:03:51:213] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closing ...
+[15:03:51:221] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} closed
+[15:03:58:295] [ERROR] - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+[15:04:35:652] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3d8512ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:04:36:466] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:675) - No active profile set, falling back to default profiles: default
+[15:04:37:886] [INFO] - org.springframework.cloud.context.scope.GenericScope.setSerializationId(GenericScope.java:295) - BeanFactory id=2d7e8d6a-20f2-3084-9f0e-b722ea4ce639
+[15:04:38:029] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$216b0fcd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:04:38:057] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3d8512ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:04:38:477] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:90) - Tomcat initialized with port(s): 8084 (http)
+[15:04:39:788] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:296) - Root WebApplicationContext: initialization completed in 3306 ms
+[15:04:39:899] [INFO] - com.llz.mybatisplus.base.config.DataSourceConfiguration.dataSource(DataSourceConfiguration.java:60) - 数据库连接属性：5
+[15:04:40:149] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:04:41:934] [INFO] - springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[15:04:42:197] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+[15:04:44:286] [INFO] - org.springframework.cloud.netflix.eureka.InstanceInfoFactory.create(InstanceInfoFactory.java:72) - Setting initial instance status as: STARTING
+[15:04:45:375] [WARN] - io.lettuce.core.resource.DefaultClientResources.finalize(DefaultClientResources.java:573) - io.lettuce.core.resource.DefaultClientResources was not shut down properly, shutdown() was not called before it's garbage-collected. Call shutdown() or shutdown(long,long,TimeUnit) 
+[15:04:49:519] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:41) - Registering application SPRINGBOOT-MYBATIS with eureka with status UP
+[15:04:49:721] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8084 (http) with context path ''
+[15:04:49:722] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.onApplicationEvent(EurekaAutoServiceRegistration.java:143) - Updating port to 8084
+[15:04:49:725] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59) - Started MybatisplusApplication in 15.741 seconds (JVM running for 16.634)
+[15:04:49:869] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
+[15:04:49:871] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
+[15:22:07:011] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8b33de9b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:22:07:872] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:675) - No active profile set, falling back to default profiles: default
+[15:22:09:439] [INFO] - org.springframework.cloud.context.scope.GenericScope.setSerializationId(GenericScope.java:295) - BeanFactory id=2d7e8d6a-20f2-3084-9f0e-b722ea4ce639
+[15:22:09:613] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6f19db9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:22:09:646] [INFO] - org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization(PostProcessorRegistrationDelegate.java:330) - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8b33de9b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[15:22:10:060] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:90) - Tomcat initialized with port(s): 8084 (http)
+[15:22:11:366] [INFO] - org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.prepareWebApplicationContext(ServletWebServerApplicationContext.java:296) - Root WebApplicationContext: initialization completed in 3479 ms
+[15:22:11:492] [INFO] - com.llz.mybatisplus.base.config.DataSourceConfiguration.dataSource(DataSourceConfiguration.java:60) - 数据库连接属性：5
+[15:22:11:753] [INFO] - com.alibaba.druid.support.logging.Log4j2Impl.info(Log4j2Impl.java:106) - {dataSource-1} inited
+[15:22:13:651] [INFO] - springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping.initHandlerMethods(PropertySourcedRequestMappingHandlerMapping.java:69) - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+[15:22:13:910] [INFO] - org.springframework.scheduling.concurrent.ExecutorConfigurationSupport.initialize(ExecutorConfigurationSupport.java:171) - Initializing ExecutorService 'applicationTaskExecutor'
+[15:22:16:102] [INFO] - org.springframework.cloud.netflix.eureka.InstanceInfoFactory.create(InstanceInfoFactory.java:72) - Setting initial instance status as: STARTING
+[15:22:21:333] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:41) - Registering application SPRINGBOOT-MYBATIS with eureka with status UP
+[15:22:21:560] [INFO] - org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:204) - Tomcat started on port(s): 8084 (http) with context path ''
+[15:22:21:561] [INFO] - org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.onApplicationEvent(EurekaAutoServiceRegistration.java:143) - Updating port to 8084
+[15:22:21:564] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:59) - Started MybatisplusApplication in 16.323 seconds (JVM running for 17.29)
+[15:22:21:729] [INFO] - io.lettuce.core.EpollProvider.<clinit>(EpollProvider.java:68) - Starting without optional epoll library
+[15:22:21:732] [INFO] - io.lettuce.core.KqueueProvider.<clinit>(KqueueProvider.java:70) - Starting without optional kqueue library
